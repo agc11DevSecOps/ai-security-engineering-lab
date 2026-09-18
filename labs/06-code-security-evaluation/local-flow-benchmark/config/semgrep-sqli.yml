@@ -1,0 +1,89 @@
+rules:
+  - id: f4f.sqlite-string-concat-execute
+    languages: [python]
+    severity: ERROR
+    message: SQLite query assembled through string concatenation before execution.
+    metadata:
+      cwe: CWE-89
+      category: security
+      technology: [sqlite]
+    patterns:
+      - pattern-inside: |
+          $QUERY = $LEFT + $RIGHT
+          ...
+          $CURSOR.execute($QUERY)
+      - pattern: $QUERY = $LEFT + $RIGHT
+  - id: f4f.subprocess-shell-true
+    languages: [python]
+    severity: ERROR
+    message: Subprocess command runs through a shell with an assembled command.
+    metadata:
+      cwe: CWE-78
+      category: security
+      technology: [subprocess]
+    patterns:
+      - pattern-inside: |
+          $COMMAND = $LEFT + $RIGHT
+          ...
+          subprocess.run($COMMAND, shell=True, ...)
+      - pattern: $COMMAND = $LEFT + $RIGHT
+  - id: f4f.path-join-untrusted
+    languages: [python]
+    severity: ERROR
+    message: User-controlled path component is joined to a fixed directory without canonicalization.
+    metadata:
+      cwe: CWE-22
+      category: security
+      technology: [filesystem]
+    patterns:
+      - pattern-inside: |
+          $PATH = Path($BASE) / $USER
+          ...
+          $PATH.read_text(...)
+      - pattern-not-inside: |
+          $NAME = Path($INPUT).name
+          ...
+          $PATH = Path($BASE) / $NAME
+      - pattern: $PATH = Path($BASE) / $USER
+  - id: f4f.pickle-loads-untrusted
+    languages: [python]
+    severity: ERROR
+    message: Pickle deserializes data received through the request flow.
+    metadata:
+      cwe: CWE-502
+      category: security
+      technology: [pickle]
+    patterns:
+      - pattern: pickle.loads($DATA)
+  - id: f4f.html-response-untrusted
+    languages: [python]
+    severity: ERROR
+    message: Request data is interpolated into an HTML response without encoding.
+    metadata:
+      cwe: CWE-79
+      category: security
+      technology: [fastapi]
+    patterns:
+      - pattern: HTMLResponse(f"...{$USER}...")
+      - pattern-not: HTMLResponse(f"...{html.escape(...)}...")
+  - id: f4f.eval-untrusted
+    languages: [python]
+    severity: ERROR
+    message: eval executes request data as Python code.
+    metadata:
+      cwe: CWE-94
+      category: security
+      technology: [python]
+    pattern: eval($DATA)
+  - id: f4f.requests-untrusted-url
+    languages: [python]
+    severity: ERROR
+    message: Request data controls an outbound HTTP destination.
+    metadata:
+      cwe: CWE-918
+      category: security
+      technology: [requests]
+    patterns:
+      - pattern-either:
+          - pattern: requests.get(record_id, ...)
+          - pattern: requests.post(record_id, ...)

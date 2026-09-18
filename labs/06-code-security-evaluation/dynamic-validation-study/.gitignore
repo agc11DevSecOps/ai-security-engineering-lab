@@ -1,0 +1,4 @@
+target/**/app.db
+target/**/__pycache__/
+strix_runs/*/.state/
+strix_runs/*/run.json

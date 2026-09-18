@@ -1,0 +1,6 @@
+{
+  "garak_payload_name": "Synthetic scanner integration canary (not a real secret)",
+  "payload_types": ["Text"],
+  "payloads": ["SYNTHETIC_SCANNER_CANARY_7F31"],
+  "lang": "en"
+}

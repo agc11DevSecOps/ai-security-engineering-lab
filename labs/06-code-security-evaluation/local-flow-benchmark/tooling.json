@@ -1,0 +1,17 @@
+{
+  "codeql": {
+    "version": "2.26.4",
+    "default_command": "codeql",
+    "environment_variable": "CODEQL_BIN"
+  },
+  "semgrep": {
+    "version": "1.176.0",
+    "default_command": "semgrep",
+    "environment_variable": "SEMGREP_BIN"
+  },
+  "bandit": {
+    "version": "1.9.4",
+    "default_command": "bandit",
+    "environment_variable": "BANDIT_BIN"
+  }
+}

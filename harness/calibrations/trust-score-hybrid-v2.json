@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "approved",
+  "method": {
+    "id": "hybrid-source-agreement-v1",
+    "description": "Historical precision from frozen calibration cases; only profiles with reserved validation are advisory-research evidence.",
+    "minimum_positive_support": 3,
+    "score_role": "advisory-research"
+  },
+  "ground_truth": {"path": "harness/calibrations/evidence/local-flow-v7-v2-oracle.json", "sha256": "01eae1eca75797683db422d682be2a65619cfdb0a5b0770485a51e04056a9fda"},
+  "scorecard": {"path": "harness/calibrations/evidence/local-flow-v7-v2-scorecard.json", "sha256": "a6b206b0e439af44d56c971788c8b78c7aa17504bcaefc3c804d24c151cd4f39"},
+  "profiles": [
+    {"source": "bandit", "category": "SQLI", "precision": 0.8, "true_positives": 4, "false_positives": 1, "positive_support": 4, "independence_group": "bandit"},
+    {"source": "semgrep", "category": "SQLI", "precision": 1.0, "true_positives": 2, "false_positives": 0, "positive_support": 4, "independence_group": "semgrep"}
+  ],
+  "approval": {"reviewer": "independent-reviewer", "approval_id": "2026-09-trust-score-v2-single-reviewer-exception", "release_id": "trust-score-hybrid-v2", "approved_at": "2026-09-07T18:30:00-04:00"},
+  "review_exception": {"two_person_review": "not satisfied", "scope": "this project only", "effect": "advisory-research only; no automatic decisions"}
+}

@@ -1,0 +1,8 @@
+RAG (Retrieval Augmented Generation) es una tecnica que combina modelos de lenguaje con
+sistemas de recuperacion de informacion externos.
+En vez de depender unicamente del conocimiento aprendido durante el entrenamiento, un sistema RAG
+busca informacion relevante en una base de datos externa antes de generar una respuesta.
+Esto permite que el modelo acceda a informacion actualizada o especifica de un dominio sin
+necesidad de reentrenar el modelo completo.
+El proceso tipico incluye: convertir documentos en embeddings vectoriales, almacenarlos en una
+base de datos vectorial, y recuperar los fragmentos mas relevantes segun la consulta del usuario.

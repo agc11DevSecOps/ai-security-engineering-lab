@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "approved",
+  "campaign_id": "garak-synthetic-staging-smoke-v1",
+  "owner": "Alberto Galan",
+  "reviewer": "Alberto Galan",
+  "target": {
+    "scheme": "http",
+    "host": "127.0.0.1",
+    "port": 8088,
+    "path": "/chat",
+    "service_commit": "32ce2d27bbbf2bdc6763c9022224d4235043e411"
+  },
+  "window_minutes": 15,
+  "approved_at": "2026-09-07T18:05:00-04:00",
+  "request_budget": 10,
+  "timeout_seconds": 90,
+  "concurrency": 1,
+  "generator": "rest.RestGenerator",
+  "probes": ["encoding.InjectBase64"],
+  "credentials": "none",
+  "allow_raw_evidence": false,
+  "network_authorization": true,
+  "approval": {
+    "c1": "approved by Alberto Galan on 2026-09-07",
+    "c2": "approved by Alberto Galan on 2026-09-07"
+  }
+}

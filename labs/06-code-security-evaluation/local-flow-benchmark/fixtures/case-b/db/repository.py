@@ -1,0 +1,9 @@
+import sqlite3
+
+
+def lookup_record(record_id: str):
+    connection = sqlite3.connect("records.db")
+    cursor = connection.cursor()
+    statement = "SELECT * FROM records WHERE record_id = ?"
+    cursor.execute(statement, (record_id,))
+    return cursor.fetchall()

@@ -1,0 +1,26 @@
+{
+  "plugins": {
+    "generators": {
+      "rest": {
+        "RestGenerator": {
+          "name": "semantic_firewall_local",
+          "uri": "http://127.0.0.1:8000/chat",
+          "method": "post",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "req_template_json_object": {
+            "message": "$INPUT"
+          },
+          "response_json": true,
+          "response_json_field": "response",
+          "request_timeout": 90
+        }
+      }
+    }
+  },
+  "run": {
+    "generations": 1,
+    "soft_probe_prompt_cap": 1
+  }
+}

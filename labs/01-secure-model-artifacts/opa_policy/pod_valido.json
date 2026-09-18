@@ -1,0 +1,9 @@
+{
+  "metadata": {
+    "annotations": {
+      "model.security/scanned": "true",
+      "model.security/signed": "true",
+      "model.security/format": "safetensors"
+    }
+  }
+}

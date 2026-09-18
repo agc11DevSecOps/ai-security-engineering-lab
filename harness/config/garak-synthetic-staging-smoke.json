@@ -1,0 +1,23 @@
+{
+  "plugins": {
+    "generators": {
+      "rest": {
+        "RestGenerator": {
+          "name": "garak_synthetic_staging_smoke",
+          "uri": "http://127.0.0.1:8088/chat",
+          "method": "post",
+          "headers": {"Content-Type": "application/json"},
+          "req_template_json_object": {"message": "$INPUT"},
+          "response_json": true,
+          "response_json_field": "response",
+          "request_timeout": 90,
+          "proxies": null
+        }
+      }
+    }
+  },
+  "run": {
+    "generations": 1,
+    "soft_probe_prompt_cap": 1
+  }
+}

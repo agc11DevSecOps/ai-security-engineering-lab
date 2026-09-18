@@ -1,0 +1,19 @@
+{
+  "source_commit": "2964ce4cae0b9a1062eb69ea8bcbbc241f301797",
+  "cases": [
+    {"id": "case-a", "verdict": "vulnerable", "cwe": "CWE-89"},
+    {"id": "case-b", "verdict": "safe"},
+    {"id": "case-c", "verdict": "vulnerable", "cwe": "CWE-89"},
+    {"id": "case-d", "verdict": "vulnerable", "cwe": "CWE-89"},
+    {"id": "case-e", "verdict": "vulnerable", "cwe": "CWE-89"},
+    {"id": "case-f", "verdict": "safe"},
+    {"id": "case-g", "verdict": "safe"},
+    {"id": "case-h", "verdict": "safe"},
+    {"id": "case-i", "verdict": "vulnerable", "cwe": "CWE-78"},
+    {"id": "case-j", "verdict": "safe"},
+    {"id": "case-k", "verdict": "vulnerable", "cwe": "CWE-89"},
+    {"id": "case-l", "verdict": "safe"},
+    {"id": "case-o", "verdict": "vulnerable", "cwe": "CWE-78"},
+    {"id": "case-p", "verdict": "safe"}
+  ]
+}

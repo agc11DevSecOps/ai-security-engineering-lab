@@ -1,0 +1,388 @@
+{
+  "schema_version": 2,
+  "cases": {
+    "case-a": {
+      "verdict": "vulnerable",
+      "expected_findings": [
+        {
+          "category": "SQLI",
+          "cwe": "CWE-89",
+          "sink": {
+            "path": "db/repository.py",
+            "line": 8
+          },
+          "accepted_detection_locations": [
+            {
+              "path": "db/repository.py",
+              "line": 7
+            },
+            {
+              "path": "db/repository.py",
+              "line": 8
+            }
+          ],
+          "flow": [
+            "routes/api.py",
+            "services/report_service.py",
+            "db/repository.py"
+          ]
+        }
+      ]
+    },
+    "case-b": {
+      "verdict": "safe",
+      "controls": [
+        "sqlite_named_parameter"
+      ],
+      "expected_findings": []
+    },
+    "case-c": {
+      "verdict": "vulnerable",
+      "expected_findings": [
+        {
+          "category": "SQLI",
+          "cwe": "CWE-89",
+          "sink": {
+            "path": "db/repository.py",
+            "line": 8
+          },
+          "accepted_detection_locations": [
+            {
+              "path": "db/repository.py",
+              "line": 7
+            },
+            {
+              "path": "db/repository.py",
+              "line": 8
+            }
+          ],
+          "flow": [
+            "routes/api.py",
+            "services/report_service.py",
+            "db/repository.py"
+          ]
+        }
+      ]
+    },
+    "case-d": {
+      "verdict": "vulnerable",
+      "expected_findings": [
+        {
+          "category": "SQLI",
+          "cwe": "CWE-89",
+          "sink": {
+            "path": "db/repository.py",
+            "line": 8
+          },
+          "accepted_detection_locations": [
+            {
+              "path": "db/repository.py",
+              "line": 7
+            },
+            {
+              "path": "db/repository.py",
+              "line": 8
+            }
+          ],
+          "flow": [
+            "routes/api.py",
+            "services/report_service.py",
+            "db/repository.py"
+          ]
+        }
+      ]
+    },
+    "case-e": {
+      "verdict": "vulnerable",
+      "expected_findings": [
+        {
+          "category": "SQLI",
+          "cwe": "CWE-89",
+          "sink": {
+            "path": "db/repository.py",
+            "line": 8
+          },
+          "accepted_detection_locations": [
+            {
+              "path": "db/repository.py",
+              "line": 7
+            },
+            {
+              "path": "db/repository.py",
+              "line": 8
+            }
+          ],
+          "flow": [
+            "routes/api.py",
+            "services/report_service.py",
+            "db/repository.py"
+          ]
+        }
+      ]
+    },
+    "case-f": {
+      "verdict": "safe",
+      "controls": [
+        "sqlite_named_parameter"
+      ],
+      "expected_findings": []
+    },
+    "case-g": {
+      "verdict": "safe",
+      "controls": [
+        "strict_integer_canonicalization",
+        "unquoted_numeric_sqlite_context"
+      ],
+      "expected_findings": []
+    },
+    "case-h": {
+      "verdict": "safe",
+      "controls": [
+        "sqlalchemy_orm_bound_predicate"
+      ],
+      "expected_findings": []
+    },
+    "case-i": {
+      "verdict": "vulnerable",
+      "expected_findings": [
+        {
+          "category": "COMMAND_INJECTION",
+          "cwe": "CWE-78",
+          "sink": {
+            "path": "db/repository.py",
+            "line": 6
+          },
+          "accepted_detection_locations": [
+            {
+              "path": "db/repository.py",
+              "line": 5
+            },
+            {
+              "path": "db/repository.py",
+              "line": 6
+            }
+          ],
+          "flow": [
+            "routes/api.py",
+            "services/report_service.py",
+            "db/repository.py"
+          ]
+        }
+      ]
+    },
+    "case-j": {
+      "verdict": "safe",
+      "controls": [
+        "subprocess_argument_list",
+        "shell_disabled"
+      ],
+      "expected_findings": []
+    },
+    "case-k": {
+      "verdict": "vulnerable",
+      "expected_findings": [
+        {
+          "category": "SQLI",
+          "cwe": "CWE-89",
+          "sink": {
+            "path": "db/repository.py",
+            "line": 7
+          },
+          "accepted_detection_locations": [
+            {
+              "path": "db/repository.py",
+              "line": 7
+            },
+            {
+              "path": "db/repository.py",
+              "line": 8
+            }
+          ],
+          "flow": [
+            "routes/api.py",
+            "services/report_service.py",
+            "db/repository.py"
+          ]
+        }
+      ]
+    },
+    "case-l": {
+      "verdict": "safe",
+      "controls": [
+        "sqlite_named_parameter"
+      ],
+      "expected_findings": []
+    },
+    "case-o": {
+      "verdict": "vulnerable",
+      "expected_findings": [
+        {
+          "category": "COMMAND_INJECTION",
+          "cwe": "CWE-78",
+          "sink": {
+            "path": "db/repository.py",
+            "line": 6
+          },
+          "accepted_detection_locations": [
+            {
+              "path": "db/repository.py",
+              "line": 5
+            },
+            {
+              "path": "db/repository.py",
+              "line": 6
+            }
+          ],
+          "flow": [
+            "routes/api.py",
+            "services/report_service.py",
+            "db/repository.py"
+          ]
+        }
+      ]
+    },
+    "case-p": {
+      "verdict": "safe",
+      "controls": [
+        "subprocess_argument_list",
+        "shell_disabled"
+      ],
+      "expected_findings": []
+    },
+    "case-q": {
+      "verdict": "vulnerable",
+      "expected_findings": [
+        {
+          "category": "PATH_TRAVERSAL",
+          "cwe": "CWE-22",
+          "sink": {
+            "path": "db/repository.py",
+            "line": 6
+          },
+          "accepted_detection_locations": [
+            {
+              "path": "db/repository.py",
+              "line": 5
+            },
+            {
+              "path": "db/repository.py",
+              "line": 6
+            }
+          ],
+          "flow": [
+            "routes/api.py",
+            "services/report_service.py",
+            "db/repository.py"
+          ]
+        }
+      ]
+    },
+    "case-r": {
+      "verdict": "safe",
+      "controls": [
+        "path_component_canonicalization",
+        "fixed_base_directory"
+      ],
+      "expected_findings": []
+    },
+    "case-s": {
+      "verdict": "vulnerable",
+      "expected_findings": [
+        {
+          "category": "INSECURE_DESERIALIZATION",
+          "cwe": "CWE-502",
+          "sink": {
+            "path": "db/repository.py",
+            "line": 6
+          },
+          "accepted_detection_locations": [
+            {
+              "path": "db/repository.py",
+              "line": 6
+            }
+          ],
+          "flow": [
+            "routes/api.py",
+            "services/report_service.py",
+            "db/repository.py"
+          ]
+        }
+      ]
+    },
+    "case-t": {
+      "verdict": "safe",
+      "controls": [
+        "json_deserialization",
+        "no_code_execution_deserializer"
+      ],
+      "expected_findings": []
+    },
+    "case-u": {
+      "verdict": "vulnerable",
+      "expected_findings": [
+        {
+          "category": "XSS",
+          "cwe": "CWE-79",
+          "sink": {
+            "path": "routes/api.py",
+            "line": 6
+          },
+          "accepted_detection_locations": [
+            {
+              "path": "routes/api.py",
+              "line": 6
+            }
+          ],
+          "flow": ["routes/api.py"]
+        }
+      ]
+    },
+    "case-v": {
+      "verdict": "safe",
+      "controls": ["html_output_encoding"],
+      "expected_findings": []
+    },
+    "case-w": {
+      "verdict": "vulnerable",
+      "expected_findings": [
+        {
+          "category": "CODE_INJECTION",
+          "cwe": "CWE-94",
+          "sink": {"path": "db/repository.py", "line": 2},
+          "accepted_detection_locations": [{"path": "db/repository.py", "line": 2}],
+          "flow": ["routes/api.py", "services/report_service.py", "db/repository.py"]
+        }
+      ]
+    },
+    "case-x": {
+      "verdict": "safe",
+      "controls": ["literal_only_parser", "no_dynamic_code_execution"],
+      "expected_findings": []
+    },
+    "case-y": {
+      "verdict": "vulnerable",
+      "expected_findings": [{
+        "category": "SSRF",
+        "cwe": "CWE-918",
+        "sink": {"path": "db/repository.py", "line": 5},
+        "accepted_detection_locations": [{"path": "db/repository.py", "line": 5}],
+        "flow": ["routes/api.py", "services/report_service.py", "db/repository.py"]
+      }]
+    },
+    "case-z": {
+      "verdict": "safe",
+      "controls": ["fixed_destination_allowlist", "request_timeout"],
+      "expected_findings": []
+    },
+    "case-aa": {
+      "verdict": "vulnerable",
+      "expected_findings": [{
+        "category": "SSRF",
+        "cwe": "CWE-918",
+        "sink": {"path": "db/repository.py", "line": 5},
+        "accepted_detection_locations": [{"path": "db/repository.py", "line": 5}],
+        "flow": ["routes/api.py", "services/report_service.py", "db/repository.py"]
+      }]
+    }
+  }
+}

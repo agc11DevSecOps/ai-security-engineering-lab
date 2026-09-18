@@ -1,0 +1,8 @@
+Python es un lenguaje de programacion interpretado, de alto nivel y proposito general.
+Fue creado por Guido van Rossum y lanzado por primera vez en 1991.
+Python enfatiza la legibilidad del codigo con su uso notable de espacios en blanco significativos.
+Sus construcciones de lenguaje y su enfoque orientado a objetos tienen como objetivo ayudar a los
+programadores a escribir codigo claro y logico para proyectos de pequeña y gran escala.
+Python es dinamicamente tipado y cuenta con recoleccion de basura automatica.
+Soporta multiples paradigmas de programacion, incluyendo estructurado, orientado a objetos y
+programacion funcional.

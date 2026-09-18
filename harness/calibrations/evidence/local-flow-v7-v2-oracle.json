@@ -1,0 +1,7 @@
+{
+  "protocol": "local-flow-v7-v2-advisory-research",
+  "source_oracle_sha256": "c8b1def71a5aba0abb9e485b9c8f3dea9ae42232e61af77cb085f7c29f03303b",
+  "calibration_cases": ["case-a", "case-b", "case-c", "case-d", "case-e", "case-f", "case-g", "case-h", "case-i", "case-j", "case-aa"],
+  "validation_cases": ["case-k", "case-l", "case-o", "case-p", "case-q", "case-r", "case-s", "case-t", "case-u", "case-v", "case-w", "case-x", "case-y", "case-z"],
+  "review": {"type": "single-reviewer-exception", "reviewer": "Alberto Galan", "scope": "this project only"}
+}

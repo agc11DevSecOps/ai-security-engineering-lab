@@ -1,0 +1,8 @@
+La seguridad de aplicaciones (AppSec) es la practica de encontrar, arreglar y prevenir
+vulnerabilidades de seguridad a nivel de aplicacion.
+Esto abarca la seguridad durante el desarrollo, despliegue y mantenimiento de una aplicacion.
+Las herramientas comunes incluyen SAST (analisis estatico), DAST (analisis dinamico) y SCA
+(analisis de composicion de software).
+El principio de defensa en profundidad sugiere usar multiples capas de controles de seguridad
+distribuidos en todo un sistema, en vez de depender de un unico mecanismo de defensa.
+OWASP Top 10 es una lista de las vulnerabilidades de seguridad mas criticas en aplicaciones web.
