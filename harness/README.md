@@ -44,8 +44,11 @@ The command emits a JSON report. A non-zero exit code means at least one capabil
 
 ## Verification
 
+The deterministic tests need the pinned test dependencies (FastAPI + Pydantic; see the repository root `requirements-ci.txt`):
+
 ```bash
 cd harness
+python3 -m pip install -r ../requirements-ci.txt
 python3 -m unittest discover -s tests -v
 ```
 

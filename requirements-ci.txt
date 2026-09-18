@@ -1,0 +1,4 @@
+# Pinned dependencies for the deterministic CI suite.
+# Only what `make test` needs; model-backed labs use their own environments.
+fastapi==0.111.0
+pydantic==2.7.1
