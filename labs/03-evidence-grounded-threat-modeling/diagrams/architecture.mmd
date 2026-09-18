@@ -1,0 +1,19 @@
+%% Sanitized reference application used by Lab 03.
+%% It models a generic public contact service; it describes no real system.
+flowchart LR
+    Visitor["Site visitor"]
+    Client["Public web client"]
+    API["Support request API"]
+    RateGuard["Request rate limiter"]
+    Challenge["Challenge-response verification"]
+    Store[("Encrypted at-rest request store")]
+    Mailer["Transactional mail gateway"]
+    Deploy["Automated deployment pipeline"]
+
+    Visitor --> Client --> API
+    API --> RateGuard
+    API --> Challenge
+    API -->|partially encrypted record| Store
+    API -->|plaintext notification| Mailer
+    Deploy --> Client
+    Deploy --> API

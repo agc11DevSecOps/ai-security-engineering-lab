@@ -20,7 +20,7 @@ The case is generic. It contains no real domain names, service providers, target
 
 ## How to navigate/run
 
-1. Provide a sanitized architecture description at `diagrams/architecture.mmd` and a bounded evidence record at `diagrams/evidence_record.md` before running generation scripts.
+1. Review the shipped sanitized inputs: the architecture at `diagrams/architecture.mmd` and the bounded evidence record at `diagrams/evidence_record.md`.
 2. Run `python tests/generate_stride_v2.py` with an available local compatible inference endpoint to request evidence-cited threat drafts.
 3. Run `python tests/dedup_threats.py <threats.json>` to produce a deterministic deduplicated copy.
 4. Run a fact-checking variant with the threat file as its second argument, then route unsupported or inconsistent results to a reviewer.

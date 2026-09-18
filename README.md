@@ -48,6 +48,8 @@ make check
 make test
 ```
 
+Every tool used in the project — what it does, why it was chosen, and where its limits were observed — is documented in [docs/TOOL_CATALOG.md](docs/TOOL_CATALOG.md).
+
 See [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md) before running a model-backed experiment.
 
 ## Evidence Standard
